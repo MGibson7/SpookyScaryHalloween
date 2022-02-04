@@ -9,6 +9,8 @@ html{
 body{
     background-color: black;
     text-align: center;
+    color: orange;
+    font-family: creepster;
     
 }
 
@@ -42,7 +44,7 @@ body{
     max-width: 90%;
 }
 
-.scary *{
+.scary div{
     flex-basis: 100%;
     background-color: black;
     margin: 10px;
