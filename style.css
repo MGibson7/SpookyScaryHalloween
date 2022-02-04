@@ -21,13 +21,12 @@ body{
     max-width: 100%;
     align-items: left;
     margin: 10px;
-    font-style: italic;
 }
 
 
 
 .header h1, img{
-    flex-basis: 100%;
+    flex-basis: 90%;
 }
 
 .header h1{
@@ -36,33 +35,101 @@ body{
     text-shadow: black;
 }
 
-.header img{
-    max-width: 250px;
-    max-height: 250px;
-}
 
 .scary{
     display: flex;
     flex-direction: row;
-    max-width: 100%;
+    max-width: 90%;
 }
 
 .scary *{
     flex-basis: 100%;
     background-color: black;
     margin: 10px;
-    padding: 200px;
+    padding: 150px;
     border: 10px solid orange;
 }
 
-.scaryitem1 img{
-    max-height: 100px;
-    max-width: 50%;
-}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg);}
+    40% { transform: translate(1px, -1px) rotate(1deg);}
+    50% { transform: translate(-1px, 2px) rotate(-1deg);}
+    60% { transform: translate(-3px, 1px) rotate(0deg);}
+    70% { transform: translate(3px, 1px) rotate(-1deg);}
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg);}
+    100% { transform: translate(1px, -2px) rotate(-1deg);}
+  }
+
 
 .scaryitem1:hover{
     background-image: url("./img/pumpkin.jpeg");
     background-size: contain;
-    background-repeat: none;
+    background-position: center;
+    background-repeat: no-repeat;
     transform: scale(1.2);
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite; 
 }
+
+
+@keyframes flickerLG {
+    0% {
+      opacity: 0.19;
+    }
+    5% {
+      opacity: 0.2;
+    }
+    10% {
+      opacity: 0.25;
+    }
+    15% {
+      opacity: 0.35;
+    }
+    25% {
+      opacity: 0.2;
+    }
+    30% {
+      opacity: 0.4;
+    }
+    35% {
+      opacity: 0.1;
+    }
+    40% {
+      opacity: 0.25;
+    }
+    45% {
+      opacity: 0.2;
+    }
+    60% {
+      opacity: 0.4;
+    }
+    70% {
+      opacity: 0.35;
+    }
+    80% {
+      opacity: 0.4;
+    }
+    90% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 0.4;
+    }
+  }
+
+  .scaryitem2:hover{
+    background-image: url("./img/fullmoon.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: flickerLG;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite; 
+}
+
