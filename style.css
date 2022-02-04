@@ -47,9 +47,12 @@ body{
     background-color: black;
     margin: 10px;
     width: 200px;
-    height: 200px;
+    height: 500px;
     border: 10px solid orange;
     padding: 15px;
+    background-image: url("./img/scarydoor2.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -188,15 +191,15 @@ body{
 @keyframes flyaround {
     0% {background-position: left;}
     10% {background-position: right;}
-    20% {background-position: top;}
-    30% {background-position: bottom;}
+    20% {background-position: left;}
+    30% {background-position: right;}
     40% {background-position: right;}
     50% {background-position: left;}
-    60% {background-position: bottom;}
-    70% {background-position: top;}
-    80% {background-position: bottom;}
-    90% {background-position: right;}
-    100% {background-position: top;}
+    60% {background-position: right;}
+    70% {background-position: left;}
+    80% {background-position: right;}
+    90% {background-position: left;}
+    100% {background-position: right;}
 
 }
 
@@ -208,4 +211,14 @@ body{
     animation-name: flyaround;
     animation-duration: 5s;
     animation-iteration-count: infinite; 
+}
+
+
+
+.scaryitem7:hover{
+    background-image: url("./img/witch.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(2);
 }
