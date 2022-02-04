@@ -23,6 +23,9 @@ body{
     max-width: 100%;
     align-items: left;
     margin: 10px;
+    animation: flickerLG;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; 
 }
 
 
