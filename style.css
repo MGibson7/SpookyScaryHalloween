@@ -9,15 +9,22 @@ html{
 body{
     background-color: black;
     text-align: center;
+    
+}
+
+@keyframes backgroundchange {
+    
 }
 
 .header{
-    display: flex;
     color: orange;
     max-width: 100%;
-    align-items: center;
-    margin: 5px;
+    align-items: left;
+    margin: 10px;
+    font-style: italic;
 }
+
+
 
 .header h1, img{
     flex-basis: 100%;
@@ -26,9 +33,36 @@ body{
 .header h1{
     text-align: center;
     font-family: creepster;
+    text-shadow: black;
 }
 
 .header img{
     max-width: 250px;
     max-height: 250px;
+}
+
+.scary{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.scary *{
+    flex-basis: 100%;
+    background-color: black;
+    margin: 10px;
+    padding: 200px;
+    border: 10px solid orange;
+}
+
+.scaryitem1 img{
+    max-height: 100px;
+    max-width: 50%;
+}
+
+.scaryitem1:hover{
+    background-image: url("./img/pumpkin.jpeg");
+    background-size: contain;
+    background-repeat: none;
+    transform: scale(1.2);
 }
