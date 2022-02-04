@@ -46,8 +46,10 @@ body{
     flex-basis: 100%;
     background-color: black;
     margin: 10px;
-    padding: 150px;
+    width: 200px;
+    height: 200px;
     border: 10px solid orange;
+    padding: 15px;
 }
 
 
@@ -129,6 +131,37 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     animation-name: flickerLG;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes glow {
+    to{
+      box-shadow: 0 0 120px 50px;
+    }
+}
+
+.scaryitem3:hover{
+    background-image: url("./img/scarymask.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: glow;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes jumpupdown{
+    from{background-position: bottom;}
+    to {background-position: top;}
+}
+
+.scaryitem4:hover{
+    background-image: url("./img/skeleton.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: jumpupdown;
     animation-duration: 0.5s;
     animation-iteration-count: infinite; 
 }
