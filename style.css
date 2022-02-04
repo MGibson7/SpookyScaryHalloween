@@ -166,3 +166,46 @@ body{
     animation-iteration-count: infinite; 
 }
 
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.scaryitem5:hover{
+    background-image: url("./img/bestscarymovies.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes flyaround {
+    0% {background-position: left;}
+    10% {background-position: right;}
+    20% {background-position: top;}
+    30% {background-position: bottom;}
+    40% {background-position: right;}
+    50% {background-position: left;}
+    60% {background-position: bottom;}
+    70% {background-position: top;}
+    80% {background-position: bottom;}
+    90% {background-position: right;}
+    100% {background-position: top;}
+
+}
+
+.scaryitem6:hover{
+    background-image: url("./img/bat.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: flyaround;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+}
