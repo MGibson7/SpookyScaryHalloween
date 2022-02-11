@@ -10,10 +10,27 @@
 </head>
 
 <body>
-
     <div class = "header">
         <h1>SPOOKY SCARY HALLOWEEN</h1>
     </div>
+
+    <button>Press me if you dare</button>
+    <script>const button = document.querySelector('button');
+
+        function greet() {
+          const movie = prompt('What is your favorite scary movie?');
+          if (movie === 'Halloween') {
+              let answer = prompt(`What was the killer's first name in ${movie}?`);
+              if (answer === 'Michael') {
+                  alert('correct! You know your movies');
+              }
+          }
+
+        }
+        
+        button.addEventListener('click', greet);
+    </script>
+
 
     <div class = "scary">
         <div class = "scaryitem1">
