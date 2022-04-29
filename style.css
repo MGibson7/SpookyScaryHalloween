@@ -6,11 +6,12 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 0.5fr);
   background-image: url(./img/halloweenbackground2.jpg);
-  background-size: contain;
+  background-size: cover;
 }
 
 body{
   background-color: black;
+  
   
 }
 
@@ -28,12 +29,11 @@ body{
 
 }
 
-.characters h3{
+#opener h3{
   font-size: 3vh;
   animation: text-flicker 3s linear infinite;
-  color: orange;
-  grid-column: 2/3;
-  grid-row: 1;
+  color: black;
+ 
   align-content: center;
   text-align: center;
 
@@ -43,7 +43,7 @@ body{
 
 .characters{
   grid-column: 2;
-  grid-row: 3;
+  grid-row: 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 3;
