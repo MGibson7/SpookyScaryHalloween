@@ -1,228 +1,156 @@
-html{
-    box-sizing: border-box;
-}
 
-*, *::before, *::after{
-    box-sizing: inherit;
+
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
 }
 
 body{
-    background-color: black;
-    text-align: center;
-    color: orange;
-    font-family: creepster;
-    
+  background-color: black;
 }
 
-@keyframes backgroundchange {
-    
+#opener{
+  font-family: butcherman;
+  color: orange;
+  grid-column: 1/4;
+  grid-row: 1;
+  text-align: center;
+  
 }
 
-.header{
-    color: orange;
-    max-width: 100%;
-    align-items: left;
-    margin: 10px;
-    animation: flickerLG;
-    animation-duration: 1s;
-    animation-iteration-count: infinite; 
+#opener h1{
+  font-size: 10vh;
+
 }
 
+#opener h3{
+  font-size: 3vh;
+  animation: text-flicker 3s linear infinite;
 
-
-.header h1, img{
-    flex-basis: 90%;
-}
-
-.header h1{
-    text-align: center;
-    font-family: creepster;
-    text-shadow: black;
 }
 
 
-.scary{
-    display: flex;
-    flex-direction: row;
-    max-width: 90%;
+
+.characters{
+  grid-column: 2;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1vh;
+
 }
 
-.scary div{
-    flex-basis: 100%;
-    background-color: black;
-    margin: 10px;
-    width: 200px;
-    height: 500px;
-    border: 10px solid orange;
-    padding: 15px;
-    background-image: url("./img/scarydoor2.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
+#firstChar{
+  grid-column: 2;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 3, 1fr;
+
+
+}
+
+#secondChar{
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 3, 1fr;
+
+
+}
+
+#thirdChar{
+  grid-column: 3;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 3, 1fr;
+
+
+}
+
+#firstChar, #secondChar, #thirdChar{
+  background: rgba(255, 255, 255, 0.103);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 
-@keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg);}
-    40% { transform: translate(1px, -1px) rotate(1deg);}
-    50% { transform: translate(-1px, 2px) rotate(-1deg);}
-    60% { transform: translate(-3px, 1px) rotate(0deg);}
-    70% { transform: translate(3px, 1px) rotate(-1deg);}
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg);}
-    100% { transform: translate(1px, -2px) rotate(-1deg);}
+#pumpkin, #pumpkin2, #pumpkin3{
+  max-height: 15vh;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+  grid-column: 2;
+
+  
+}
+
+#firstChar:hover, #secondChar:hover,  #thirdChar:hover{
+  cursor: pointer;
+}
+
+#pumpkin:hover, #pumpkin2:hover, #pumpkin3:hover{
+  transform: scale(2.1);
+}
+
+
+
+
+@keyframes text-flicker {
+  0% {
+    opacity:0.1;
+    text-shadow: 0px 0px 29px orange
   }
-
-
-.scaryitem1:hover{
-    background-image: url("./img/pumpkin.jpeg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: scale(1.2);
-    animation-name: shake;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite; 
-}
-
-
-@keyframes flickerLG {
-    0% {
-      opacity: 0.19;
-    }
-    5% {
-      opacity: 0.2;
-    }
-    10% {
-      opacity: 0.25;
-    }
-    15% {
-      opacity: 0.35;
-    }
-    25% {
-      opacity: 0.2;
-    }
-    30% {
-      opacity: 0.4;
-    }
-    35% {
-      opacity: 0.1;
-    }
-    40% {
-      opacity: 0.25;
-    }
-    45% {
-      opacity: 0.2;
-    }
-    60% {
-      opacity: 0.4;
-    }
-    70% {
-      opacity: 0.35;
-    }
-    80% {
-      opacity: 0.4;
-    }
-    90% {
-      opacity: 0.2;
-    }
-    100% {
-      opacity: 0.4;
-    }
+  
+  2% {
+    opacity:1;
+    text-shadow: 0px 0px 29px orange
   }
-
-  .scaryitem2:hover{
-    background-image: url("./img/fullmoon.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    animation-name: flickerLG;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite; 
-}
-
-@keyframes glow {
-    to{
-      box-shadow: 0 0 120px 50px;
-    }
-}
-
-.scaryitem3:hover{
-    background-image: url("./img/scarymask.webp");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    animation-name: glow;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite; 
-}
-
-@keyframes jumpupdown{
-    from{background-position: bottom;}
-    to {background-position: top;}
-}
-
-.scaryitem4:hover{
-    background-image: url("./img/skeleton.jpeg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    animation-name: jumpupdown;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite; 
-}
-
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-}
-
-.scaryitem5:hover{
-    background-image: url("./img/bestscarymovies.jpeg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    animation-name: spin;
-    animation-duration: 5s;
-    animation-iteration-count: infinite; 
-}
-
-@keyframes flyaround {
-    0% {background-position: left;}
-    10% {background-position: right;}
-    20% {background-position: left;}
-    30% {background-position: right;}
-    40% {background-position: right;}
-    50% {background-position: left;}
-    60% {background-position: right;}
-    70% {background-position: left;}
-    80% {background-position: right;}
-    90% {background-position: left;}
-    100% {background-position: right;}
-
-}
-
-.scaryitem6:hover{
-    background-image: url("./img/bat.jpeg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    animation-name: flyaround;
-    animation-duration: 5s;
-    animation-iteration-count: infinite; 
-}
-
-
-
-.scaryitem7:hover{
-    background-image: url("./img/witch.jpeg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+  8% {
+    opacity:0.1;
+    text-shadow: 0px 0px 29px orange
+  }
+  9% {
+    opacity:1;
+    text-shadow: 0px 0px 29px orange
+  }
+  12% {
+    opacity:0.1;
+    text-shadow: 0px 0px orange
+  }
+  20% {
+    opacity:1;
+    text-shadow: 0px 0px 29px orange
+  }
+  25% {
+    opacity:0.3;
+    text-shadow: 0px 0px 29px orange
+  }
+  30% {
+    opacity:1;
+    text-shadow: 0px 0px 29px orange
+  }
+  
+  70% {
+    opacity:0.7;
+    text-shadow: 0px 0px 29px orange
+  }
+  
+  72% {
+    opacity:0.2;
+    text-shadow:0px 0px 29px orange
+  }
+  
+  77% {
+    opacity:.9;
+    text-shadow: 0px 0px 29px orange
+  }
+  100% {
+    opacity:.9;
+    text-shadow: 0px 0px 29px orange
+  }
 }
