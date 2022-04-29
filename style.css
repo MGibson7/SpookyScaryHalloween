@@ -1,4 +1,4 @@
-
+@import url('http://fonts.cdnfonts.com/css/horror-type');
 
 
 .container{
@@ -8,11 +8,12 @@
 }
 
 body{
-  background-color: black;
+  background-color: #2d3436;
+  background-image: linear-gradient(25deg, #2d3436 0%, #0000003d 89%);
 }
 
 #opener{
-  font-family: butcherman;
+  font-family: Horror Type;
   color: orange;
   grid-column: 1/4;
   grid-row: 1;
@@ -21,7 +22,7 @@ body{
 }
 
 #opener h1{
-  font-size: min(10vh, 50px);
+  font-size: max(10vh, 50px);
 
 }
 
