@@ -5,19 +5,19 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 0.5fr);
-  background-image: url(./img/halloweenbackground2.jpg);
-  background-size: cover;
+
 }
 
 body{
-  background-color: black;
+background-image: url(./img/halloween.jpg);
+background-size: cover;
   
   
 }
 
 #opener{
-  font-family: Horror Type;
-  color: black;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: orange;
   grid-column: 1/4;
   grid-row: 1;
   text-align: center;
@@ -32,7 +32,7 @@ body{
 #opener h3{
   font-size: 3vh;
   animation: text-flicker 3s linear infinite;
-  color: black;
+  color: orange;
  
   align-content: center;
   text-align: center;
