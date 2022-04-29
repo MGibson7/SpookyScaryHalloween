@@ -28,9 +28,14 @@ body{
 
 }
 
-#opener h3{
+.characters h3{
   font-size: 3vh;
   animation: text-flicker 3s linear infinite;
+  color: orange;
+  grid-column: 2/3;
+  grid-row: 1;
+  align-content: center;
+  text-align: center;
 
 }
 
@@ -41,6 +46,7 @@ body{
   grid-row: 3;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 3;
   column-gap: 1vh;
 
 }
