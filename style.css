@@ -9,7 +9,7 @@
 }
 
 body{
-background-image: url(./img/halloween2.jpg);
+background-image: url(./img/halloween.jpg);
 background-size: cover;
   
   
@@ -32,7 +32,7 @@ background-size: cover;
 #opener h3{
   font-size: 3vh;
   animation: text-flicker 3s linear infinite;
-  color: black;
+  color: orange;
  
   align-content: center;
   text-align: center;
