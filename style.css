@@ -286,8 +286,10 @@ img{
 
 a:hover{
   cursor: pointer;
-  transform: scale(1.5);
+  
 }
+
+
 
 @keyframes floating {
   0% { transform: translate(0,  0px); }
