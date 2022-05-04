@@ -70,4 +70,4 @@ function randomImage() {
     }
     
     randomImage();
-    setInterval(randomImage, 1000);
+    setInterval(randomImage, 2000);

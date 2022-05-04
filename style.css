@@ -284,6 +284,9 @@ img{
   max-width: 30vw;
 }
 
+a{
+  color: orange;
+}
 a:hover{
   cursor: pointer;
   
