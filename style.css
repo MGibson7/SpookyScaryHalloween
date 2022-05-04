@@ -1,4 +1,7 @@
-
+body{
+  background-color: #000000;
+background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+}
 
 
 .container{
@@ -201,13 +204,7 @@ img{
   z-index: -1;
 }
 
-@media (max-width: 750px) {
-  #background-video { display: none; }
-  body {
-    background: url("./img/halloween2.jpg") no-repeat;
-    background-size: cover;
-  }
-}
+
 
 #siteMaze{
     position: fixed;
@@ -248,8 +245,8 @@ img{
 #siteDisplay{
   position: fixed;
   display: none; /* Hidden by default */
-  top: 20vh;
-  right: 10%;
+  top: 50vh;
+  left: 50%;
   transform: translateX(-50%);
   background-color: orange(0,0,0,0); /* Black background with opacity */
   color: orange;
@@ -291,4 +288,15 @@ img{
   0% { transform: translate(0,  0px); }
   50%  { transform: translate(0, 15px); }
   100%   { transform: translate(0, -0px); }   
+}
+
+@media (max-width: 750px) {
+  #background-video { display: none; }
+  body {
+    background: url("./img/halloween2.jpg") no-repeat;
+    background-size: cover;
+  }
+  #sitMaze{
+    top: 30vh;
+  }
 }
