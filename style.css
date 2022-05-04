@@ -210,7 +210,7 @@ img{
     position: fixed;
     display: none; /* Hidden by default */
     top: 20vh;
-    left: 20%;
+    left: 30%;
     transform: translateX(-50%);
     background-color: orange(0,0,0,0); /* Black background with opacity */
     color: orange;
@@ -237,10 +237,11 @@ img{
   
 }
 
-#siteMaze > div{
+#siteMaze div{
   border-bottom: 5px dashed purple;
 
 }
+
 
 #siteDisplay{
   position: fixed;
@@ -263,8 +264,7 @@ img{
   position: fixed;
   display: none; /* Hidden by default */
   top: 20vh;
-  left: 50%;
-  right: 50%;
+  left: 70%;
   transform: translateX(-50%);
   background-color: orange(0,0,0,0); /* Black background with opacity */
   color: orange;
@@ -282,6 +282,11 @@ img{
 #guide img{
   max-height: 30vh;
   max-width: 30vw;
+}
+
+a:hover{
+  cursor: pointer;
+  transform: scale(1.5);
 }
 
 @keyframes floating {
