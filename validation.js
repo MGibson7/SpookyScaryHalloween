@@ -14,6 +14,7 @@ firstChar.addEventListener('click', event =>{
     document.getElementById("siteMaze").style.display = "grid";
     document.getElementById("siteDisplay").style.display = "grid";
     document.getElementById("guide").style.display = "grid";
+    document.getElementById("guide").innerHTML = " <img src = './img/pumpkinChar.webp'>"
 });
 secondChar.addEventListener('click', event =>{
     document.getElementById('choose').innerHTML = "";
@@ -21,6 +22,7 @@ secondChar.addEventListener('click', event =>{
     document.getElementById("siteMaze").style.display = "grid";
     document.getElementById("siteDisplay").style.display = "grid";
     document.getElementById("guide").style.display = "grid";
+    document.getElementById("guide").innerHTML = " <img src = './img/witch.png'>"
 });
 thirdChar.addEventListener('click', event =>{
     document.getElementById('choose').innerHTML = "";
