@@ -8,12 +8,8 @@
 
 }
 
-body{
-background-image: url(./img/halloween.jpg);
-background-size: cover;
-  
-  
-}
+
+
 
 #opener{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -176,3 +172,15 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   40% {transform: translateY(-30px);} 
   60% {transform: translateY(-15px);} 
 } 
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
