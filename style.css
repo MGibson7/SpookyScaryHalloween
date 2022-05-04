@@ -290,17 +290,11 @@ img{
   100%   { transform: translate(0, -0px); }   
 }
 
-@media (min-width: 480px) {
+@media (max-width: 750px) {
   #background-video { display: none; }
   body {
     background: url("./img/halloween2.jpg") no-repeat;
     background-size: cover;
   }
-  h1{
-    font-size: 4vh;
-  }
-  #sitMaze{
-    top: 30vh;
-    font-size: 2vh;
-  }
+ 
 }
