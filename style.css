@@ -103,10 +103,26 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   transform: scale(2.1);
 }
 
-#siteGuide{
+#randomImage1{
   grid-column: 2;
-  grid-row: 5;
+  grid-row: 3/5;
   animation: bounce
+}
+#randomImage2{
+  grid-column: 3;
+  grid-row: 3/5;
+  animation: bounce
+}
+
+#randomImage3{
+  grid-column: 1;
+  grid-row: 3/5;
+  animation: bounce
+}
+
+img{
+  max-height: 20vh;
+  max-width: 20vw;
 }
 
 
@@ -183,4 +199,96 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   top: 0;
   bottom: 0;
   z-index: -1;
+}
+
+@media (max-width: 750px) {
+  #background-video { display: none; }
+  body {
+    background: url("./img/halloween2.jpg") no-repeat;
+    background-size: cover;
+  }
+}
+
+#siteMaze{
+    position: fixed;
+    display: none; /* Hidden by default */
+    top: 20vh;
+    left: 20%;
+    transform: translateX(-50%);
+    background-color: orange(0,0,0,0); /* Black background with opacity */
+    color: orange;
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    text-align: center;
+    grid-column: 1/5;
+    grid-row: 1/5;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    
+}
+
+#startingPoint{
+  grid-column: 1;
+  grid-row: 1;
+ 
+
+}
+
+#aboutUs{
+  grid-column: 2;
+  grid-row: 1;
+
+  
+}
+
+#siteMaze > div{
+  border-bottom: 5px dashed purple;
+
+}
+
+#siteDisplay{
+  position: fixed;
+  display: none; /* Hidden by default */
+  top: 20vh;
+  right: 10%;
+  transform: translateX(-50%);
+  background-color: orange(0,0,0,0); /* Black background with opacity */
+  color: orange;
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  text-align: center;
+  grid-column: 1/5;
+  grid-row: 1/5;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  
+}
+
+#guide{
+  position: fixed;
+  display: none; /* Hidden by default */
+  top: 20vh;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  background-color: orange(0,0,0,0); /* Black background with opacity */
+  color: orange;
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  text-align: center;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  
+}
+
+#guide img{
+  max-height: 30vh;
+  max-width: 30vw;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }   
 }
